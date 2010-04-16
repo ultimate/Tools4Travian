@@ -1,0 +1,25 @@
+Dies ist ein Programm, dass eine Karte für eine ausgewählte Travian-Welt erstellt.
+
+Um die Karten-Darstellung anzupassen muss eine *.properties-Datei angelegt werden, welche folgendem Muster entspricht:
+
+_________________________________________________
+# In dieser Zeile wird der Speicherort der map.sql-Datei angegeben.
+# Die Datei kann sowohl Lokal liegen, als auch automatisch vom Server geladen werden.
+map.sql=http://welt3.travian.de/map.sql
+
+# Dies ist die Standard Gruppe, der alle Spieler zugeordnet werden, die in keiner anderen Gruppe sind.
+# Name dieser Gruppe
+group.0.name=Belegte Felder
+# Darstellungsfarbe dieser Gruppe in r,g,b
+group.0.color=153,153,153
+# Unter den Attribuen ...allies und ...players können Allianzen, bzw. Spieler dieser Gruppe zugeordnet werden. Es muss die ID angegeben werden.
+
+# Nachfolgend können beliebig viele Gruppen definiert werden, die lediglich fortlaufend nummeriert sein müssen.
+group.1.name=Name dieser Gruppe
+group.1.color=0,0,255
+group.1.allies=123,456
+group.1.players=4,4567
+_________________________________________________
+
+Diese *.properties-Datei kann entweder im Verzeichnis "bin" oder im Hauptverzeichnis des Programms abgelegt werden.
+Bei Start des Programms wird nach der *.properties-Datei gefragt, die verwendet werden soll. Hier reicht die Angabe des Namens ohne .properties.

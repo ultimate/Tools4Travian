@@ -1,0 +1,40 @@
+This tool provides a nice Travian-World-Map. Copyright by ultimate...
+
+Launch the programm with
+> TravianWorldMapGenerator.bat
+
+In the console you can add additional args
+Type > TravianWorldMapGenerator -helpS
+Type > TravianWorldMapGenerator -confS
+for explanation...
+
+In order to have full features have a look at s5.bat.
+There are some args added to enable more features. Those features are enabled only via additional
+args and offer the opportunity to offer this tool to other alliances without full functionality... ;-)
+
+To enable user defined map displaying a *.properties-File is required:
+_________________________________________________
+
+# lines starting with # will be comments...
+
+# This line provides the source of the map.sql file
+# The file can as well be local on your pc or on an server in the www:
+map.sql=http://s5.travian.com/map.sql
+
+# This is the standard group. All players, that are not in any group are displayed in this group.
+# name of the group
+group.0.name=Occupied Fields
+# Color of this group in r,g,b
+group.0.color=153,153,153
+# The attributes ...allies and ...players are meant to add alliances and players to several groups
+
+# In the following you can define as many groups as you like (as long as you are in the group limit)
+# as long as they are numbered without a gap
+group.1.name=name of this group
+group.1.color=0,0,255
+group.1.allies=123,456
+group.1.players=4,4567
+_________________________________________________
+
+The *.properties-Datei may be located in the folder "bin" or in the programs main folder.
+When launching the programm a dialogue will ask for the *.properties-file. You only have to enter the name without file-extension.
