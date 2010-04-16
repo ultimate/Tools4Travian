@@ -1,0 +1,1 @@
+TravianWorldMapGenerator -CF=coma -GL=100 -RB -PS -LB=onAllFailures -TC=5
